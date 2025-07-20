@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salman's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#111111] text-white">
+    <!-- Header/Navbar -->
+    <header
+      class="bg-transparent sticky top-0 flex justify-between items-center px-6 md:px-20 py-5 z-50 transition-colors duration-300 backdrop-blur-md"
+    >
+      <img src="./logo.png" alt="Salman Logo" class="h-10 w-auto" />
+
+      <button
+        id="hamburgerBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="sideMenu"
+        type="button"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="desktop-nav flex space-x-8 items-center">
+        <a href="#about_me" class="hover:text-amber-400 transition"
+          >This Is My Passion</a
+        >
+        <a href="#skills" class="hover:text-amber-400 transition"
+          >What Can I Do</a
+        >
+        <a href="#portfolio" class="hover:text-amber-400 transition"
+          >My Top Projects</a
+        >
+      </nav>
+    </header>
+
+    <div id="sideMenu" aria-hidden="true" role="menu">
+      <nav>
+        <a href="#about_me" role="menuitem">This Is My Passion</a>
+        <a href="#skills" role="menuitem">What Can I Do</a>
+        <a href="#portfolio" role="menuitem">My Top Projects</a>
+      </nav>
+    </div>
+
+    <div id="overlay" tabindex="-1"></div>
+
+    <!-- Main Hero Section -->
+    <main
+      class="px-6 md:px-20 py-24 flex flex-col md:flex-row items-center justify-between gap-12 animate-blur-fade-slidedown"
+    >
+      <!-- Left Side with Glow -->
+      <div class="md:w-1/2 relative">
+        <!-- Yellow blur glow blob -->
+        <div
+          class="absolute -top-24 -left-10 w-96 h-96 bg-yellow-400 opacity-30 blur-3xl rounded-full z-0"
+        ></div>
+
+        <!-- Hero Text -->
+        <div class="space-y-6 relative z-10">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight text-white">
+            Building Ideas Into Interfaces.
+          </h1>
+          <p class="text-gray-400 text-lg">
+            A passionate developer crafting clean and creative solutions on the
+            web.
+          </p>
+          <button
+            class="bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-semibold px-6 py-3 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-amber-400/40 active:scale-95 active:shadow-inner animate-button-glow"
+          >
+            Let's Connect
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Side Grid with Retro Gaming Animation -->
+      <div class="md:w-1/2 grid grid-cols-2 grid-rows-5 gap-4 w-full max-w-md">
+        <div class="retro-box" data-delay="0">&lt;/&gt; Code</div>
+        <div class="retro-box" data-delay="0.2">💻 Tech Stack</div>
+        <div class="retro-box col-span-2" data-delay="0.4">🌍 Web Projects</div>
+        <div class="retro-box" data-delay="0.6">🎨 UI / UX</div>
+        <div class="retro-box" data-delay="0.8">📦 Freelance</div>
+        <div class="retro-box col-span-2" data-delay="1.0">
+          🔥 Passion Projects
+        </div>
+        <div class="retro-box" data-delay="1.2">🧠 Full Stack Dev</div>
+        <div class="retro-box" data-delay="1.4">🐍 Python Lover</div>
+        <div class="retro-box" data-delay="1.6">📚 Always Learning</div>
+        <div class="retro-box" data-delay="1.8">🧙‍♂️ Backend Wizard</div>
+      </div>
+    </main>
+
+    <!-- About Section -->
+    <section
+      id="about_me"
+      class="px-6 py-24 md:px-20 pt-24 pb-45 flex flex-col md:flex-row items-center justify-between gap-12 scroll-mt-20"
+    >
+      <div class="md:w-1/2 flex items-center justify-center">
+        <div
+          id="terminal-wrapper"
+          class="relative w-full flex justify-center items-center py-6"
+        >
+          <div
+            id="terminal-card"
+            class="w-full max-w-6xl min-h-[320px] bg-[#1e1e1e]/80 border-[1.5px] border-[#333] backdrop-blur-md rounded-xl shadow-2xl drop-shadow-[0_0_35px_rgba(251,191,36,0.2)] ring-1 ring-yellow-400/20 transition-transform duration-150"
+          >
+            <!-- Header -->
+            <div
+              class="flex justify-between items-center px-4 py-2 border-b border-[#333]"
+            >
+              <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+              </div>
+              <span class="text-gray-400 text-xs">terminal — bash</span>
+            </div>
+
+            <!-- Terminal Body -->
+            <div
+              class="w-full h-[284px] p-6 font-mono text-yellow-300 text-base overflow-y-auto bg-[#121212] border-t border-[#333] rounded-b-xl"
+            >
+              <div
+                id="console-output"
+                class="whitespace-pre-line leading-relaxed h-full w-full opacity-0 translate-y-4 transition-all duration-700 ease-out"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:w-1/2 space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold">Welcome to My World 👋</h2>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          Hi, I'm Salman. I'm a full-time passionate developer dedicated to
+          sharpening my skills and helping people leave a strong digital
+          footprint in the world.
+        </p>
+
+        <p class="text-gray-400 text-lg leading-relaxed">
+          I'm currently pursuing a Computer Science degree at Kannur University.
+          Along the way, I’ve fallen in love with solving real problems through
+          code, crafting intuitive interfaces, and bringing digital ideas to
+          life.
+        </p>
+
+        <p class="text-gray-400 text-lg leading-relaxed">
+          I love coding. I love building. Whether it’s personal projects,
+          freelance work, or just experimenting with new tools — creating
+          digital products is where I feel at home.
+        </p>
+
+        <p class="text-amber-400 font-medium text-lg">
+          Let's connect and build something amazing together!
+        </p>
+      </div>
+    </section>
+    <!-- skills -->
+    <section
+      class="py-24 bg-[#0d0d0d] px-6 py-20 text-white scroll-mt-20"
+      id="skills"
+    >
+      <div class="text-center mb-16">
+        <p class="text-sm uppercase tracking-widest text-gray-400">
+          Skills & Tools
+        </p>
+        <h2
+          class="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-600 text-transparent bg-clip-text drop-shadow-lg"
+        >
+          My Dev Arsenal 🧰
+        </h2>
+        <p class="mt-4 text-gray-400 text-sm max-w-xl mx-auto">
+          Everything I use to build, break, fix, and ship the web.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+      >
+        <!-- HTML -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Built layouts without divs once 😎”
+          </p>
+          <h3 class="text-xl font-semibold text-white">HTML</h3>
+        </div>
+
+        <!-- CSS -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Selectors are my superpower 🎯”
+          </p>
+          <h3 class="text-xl font-semibold text-white">CSS</h3>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Async is my second language ⚡”
+          </p>
+          <h3 class="text-xl font-semibold text-white">JavaScript</h3>
+        </div>
+
+        <!-- React -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “I vibe with components like LEGO 🧱”
+          </p>
+          <h3 class="text-xl font-semibold text-white">React</h3>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div class="glass-tile">
+          <img
+            src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Utility-first. Pretty always.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">Tailwind CSS</h3>
+        </div>
+
+        <!-- Python -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">“I speak fluent 🐍”</p>
+          <h3 class="text-xl font-semibold text-white">Python</h3>
+        </div>
+
+        <!-- Django -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">“Backend wizard 🧙‍♂️”</p>
+          <h3 class="text-xl font-semibold text-white">Django</h3>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “I remember everything 📊”
+          </p>
+          <h3 class="text-xl font-semibold text-white">PostgreSQL</h3>
+        </div>
+
+        <!-- MySQL -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Safe. Structured. Solid.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">MySQL</h3>
+        </div>
+
+        <!-- Git -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Version control or no control.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">Git</h3>
+        </div>
+
+        <!-- GitHub -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            class="h-12 w-12 mb-4 invert"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “My portfolio’s second home.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">GitHub</h3>
+        </div>
+
+        <!-- Docker -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Runs on my machine. Yours too.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">Docker</h3>
+        </div>
+
+        <!-- WSL/Linux -->
+        <div class="glass-tile">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+            class="h-12 w-12 mb-4"
+          />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Terminal is my playground.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">WSL / Linux</h3>
+        </div>
+
+        <!-- Render -->
+        <div class="glass-tile">
+          <img src="./logo.png" class="h-12 w-12 mb-4" />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Where my code goes live 🟣”
+          </p>
+          <h3 class="text-xl font-semibold text-white">Render</h3>
+        </div>
+
+        <!-- Cloudinary -->
+        <div class="glass-tile">
+          <img src="./logo.png" class="h-12 w-12 mb-4" />
+          <p class="text-sm text-gray-300 italic mb-3">
+            “Image and video magic in the cloud.”
+          </p>
+          <h3 class="text-xl font-semibold text-white">Cloudinary</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Projects -->
+    <section id="portfolio" class="px-6 md:px-20 py-12">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <p class="text-sm uppercase tracking-widest text-gray-400">
+          Featured Projects
+        </p>
+        <h2
+          class="text-5xl font-extrabold bg-gradient-to-r from-amber-400 to-yellow-300 text-transparent bg-clip-text drop-shadow-lg"
+        >
+          My Work Portfolio 🚀
+        </h2>
+        <p class="mt-4 text-gray-400 text-sm max-w-xl mx-auto">
+          Showcasing my latest projects and creative solutions
+        </p>
+      </div>
+
+      <!-- Slider Container -->
+      <div class="relative max-w-6xl mx-auto">
+        <!-- Main Slider -->
+        <div
+          class="relative bg-[#1e1e1e]/80 border border-[#333] backdrop-blur-md rounded-xl overflow-hidden shadow-2xl drop-shadow-[0_0_35px_rgba(251,191,36,0.2)] ring-1 ring-yellow-400/20"
+        >
+          <!-- Slider Content -->
+          <div
+            id="slider-content"
+            class="relative h-[700px] md:h-[500px] overflow-hidden"
+          >
+            <!-- Slide 1 -->
+            <div
+              class="slider-item absolute inset-0 flex flex-col md:flex-row transition-transform duration-700 ease-in-out"
+              style="transform: translateX(0%)"
+            >
+              <div class="w-full md:w-1/2 relative h-2/5 md:h-full">
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"
+                  alt="Web Development Project"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-300/20"
+                ></div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[#1a1a1a] to-[#222222] h-3/5 md:h-full"
+              >
+                <h3
+                  class="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 leading-tight"
+                >
+                  Student Platform
+                </h3>
+                <p
+                  class="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8"
+                >
+                  A full-stack student solution built with Django PostgreSQL and
+                  Redis. Features include user authentication, live chat ,group
+                  chat, clubs, dashboard, profile, NoticeBoard,and a responsive
+                  design that works seamlessly across all devices.
+                </p>
+                <div class="flex gap-3 mb-6 md:mb-8">
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >Django</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >Redis</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >PostgreSQL</span
+                  >
+                </div>
+                <button
+                  onclick="showIssuePopup()"
+                  class="bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-semibold px-6 md:px-8 py-2 md:py-3 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-amber-400/40 active:scale-95 w-fit"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="slider-item absolute inset-0 flex flex-col md:flex-row transition-transform duration-700 ease-in-out"
+              style="transform: translateX(100%)"
+            >
+              <div class="w-full md:w-1/2 relative h-2/5 md:h-full">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+                  alt="Data Analytics Dashboard"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-300/20"
+                ></div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[#1a1a1a] to-[#222222] h-3/5 md:h-full"
+              >
+                <h3
+                  class="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 leading-tight"
+                >
+                  Bookmarking Dashboard
+                </h3>
+                <p
+                  class="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8"
+                >
+                  Interactive data visualization dashboard with real-time
+                  metrics and reporting. Built with Python backend and modern
+                  JavaScript frontend, and customizable widgets for business
+                  intelligence.
+                </p>
+                <div class="flex gap-3 mb-6 md:mb-8">
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >Python</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >Django</span
+                  >
+                </div>
+                <button
+                  onclick="showIssuePopup()"
+                  class="bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-semibold px-6 md:px-8 py-2 md:py-3 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-amber-400/40 active:scale-95 w-fit"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="slider-item absolute inset-0 flex flex-col md:flex-row transition-transform duration-700 ease-in-out"
+              style="transform: translateX(200%)"
+            >
+              <div class="w-full md:w-1/2 relative h-2/5 md:h-full">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                  alt="Mobile App Development"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-300/20"
+                ></div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[#1a1a1a] to-[#222222] h-3/5 md:h-full"
+              >
+                <h3
+                  class="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 leading-tight"
+                >
+                  Task Management App
+                </h3>
+                <p
+                  class="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8"
+                >
+                  A productivity app designed to help teams collaborate
+                  efficiently. Features include task assignments, deadline
+                  tracking, real-time notifications, and seamless integration
+                  with popular development tools.
+                </p>
+                <div class="flex gap-3 mb-6 md:mb-8">
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >React Native</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >Node.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >MongoDB</span
+                  >
+                </div>
+                <button
+                  onclick="showIssuePopup()"
+                  class="bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-semibold px-6 md:px-8 py-2 md:py-3 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-amber-400/40 active:scale-95 w-fit"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div
+              class="slider-item absolute inset-0 flex flex-col md:flex-row transition-transform duration-700 ease-in-out"
+              style="transform: translateX(300%)"
+            >
+              <div class="w-full md:w-1/2 relative h-1/2 md:h-full">
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
+                  alt="DevOps & Cloud"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-yellow-300/20"
+                ></div>
+              </div>
+              <div
+                class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[#1a1a1a] to-[#222222] h-1/2 md:h-full"
+              >
+                <h3
+                  class="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 leading-tight"
+                >
+                  DevOps Pipeline
+                </h3>
+                <p
+                  class="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8"
+                >
+                  Automated CI/CD pipeline with Docker containerization and
+                  cloud deployment. Streamlines development workflow with
+                  automated testing, building, and deployment processes for
+                  faster delivery cycles.
+                </p>
+                <div class="flex gap-3 mb-6 md:mb-8">
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >Docker</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >GitHub Actions</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-sm border border-amber-400/30"
+                    >AWS</span
+                  >
+                </div>
+                <button
+                  onclick="showIssuePopup()"
+                  class="bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-semibold px-6 md:px-8 py-2 md:py-3 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-amber-400/40 active:scale-95 w-fit"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button
+            id="prevBtn"
+            class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#1a1a1a]/60 md:bg-[#1a1a1a]/90 hover:bg-[#1a1a1a] border border-amber-400/30 rounded-full shadow-lg hover:shadow-amber-400/40 transition-all duration-300 flex items-center justify-center group"
+          >
+            <svg
+              class="w-5 h-5 md:w-6 md:h-6 text-amber-400 group-hover:text-amber-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <button
+            id="nextBtn"
+            class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#1a1a1a]/60 md:bg-[#1a1a1a]/90 hover:bg-[#1a1a1a] border border-amber-400/30 rounded-full shadow-lg hover:shadow-amber-400/40 transition-all duration-300 flex items-center justify-center group"
+          >
+            <svg
+              class="w-5 h-5 md:w-6 md:h-6 text-amber-400 group-hover:text-amber-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="flex justify-center mt-8 space-x-3">
+          <button
+            class="dot w-3 h-3 rounded-full bg-amber-400 scale-125 transition-all duration-300"
+            data-slide="0"
+          ></button>
+          <button
+            class="dot w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all duration-300"
+            data-slide="1"
+          ></button>
+          <button
+            class="dot w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all duration-300"
+            data-slide="2"
+          ></button>
+          <button
+            class="dot w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all duration-300"
+            data-slide="3"
+          ></button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mt-6 max-w-md mx-auto">
+          <div class="w-full bg-[#333] rounded-full h-1">
+            <div
+              id="progress-bar"
+              class="bg-gradient-to-r from-amber-400 to-yellow-300 h-1 rounded-full transition-all duration-700"
+              style="width: 25%"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- What Can I Do For You Section -->
+    <section class="px-6 md:px-20 py-12 relative overflow-hidden">
+      <!-- Background Effects -->
+      <div class="absolute inset-0">
+        <!-- Animated Background Grid -->
+        <div class="absolute inset-0 opacity-10">
+          <div
+            class="w-full h-full"
+            style="
+              background-image: radial-gradient(
+                circle,
+                #fbbf24 1px,
+                transparent 1px
+              );
+              background-size: 50px 50px;
+              animation: float 10s ease-in-out infinite;
+            "
+          ></div>
+        </div>
+
+        <!-- Code Rain Effect -->
+        <div class="absolute inset-0 overflow-hidden">
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 10%; animation-delay: 0s"
+          >
+            &lt;div&gt;
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 20%; animation-delay: 0.5s"
+          >
+            function()
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 30%; animation-delay: 1s"
+          >
+            {}
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 40%; animation-delay: 1.5s"
+          >
+            const
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 50%; animation-delay: 2s"
+          >
+            return
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 60%; animation-delay: 0.3s"
+          >
+            &lt;/&gt;
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 70%; animation-delay: 1.8s"
+          >
+            async
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 80%; animation-delay: 0.8s"
+          >
+            await
+          </div>
+          <div
+            class="code-rain absolute text-amber-300 opacity-30"
+            style="left: 90%; animation-delay: 2.2s"
+          >
+            class
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <!-- Left Side - Content -->
+        <div class="lg:w-1/2 space-y-8">
+          <!-- Header -->
+          <div class="space-y-4">
+            <p class="text-sm uppercase tracking-widest text-gray-400">
+              Your Digital Success Partner
+            </p>
+            <h2
+              class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-amber-400 to-yellow-300 text-transparent bg-clip-text drop-shadow-lg"
+            >
+              What Can I Do For You? 💼
+            </h2>
+            <div class="typewriter text-lg text-amber-400 font-mono">
+              Building digital dreams into reality...
+            </div>
+          </div>
+
+          <!-- Main Description -->
+          <div class="space-y-6">
+            <p class="text-xl text-gray-300 leading-relaxed">
+              I'm not just a developer – I'm your
+              <span class="text-amber-400 font-semibold">digital architect</span
+              >. I transform your ideas into powerful, scalable web solutions
+              that don't just look amazing, but actually
+              <span class="text-yellow-300 font-semibold">drive results</span>.
+            </p>
+
+            <p class="text-lg text-gray-400 leading-relaxed">
+              From concept to deployment, I handle the entire development
+              lifecycle. My full-stack expertise means you get seamless
+              integration, optimal performance, and a website that actually
+              <span class="text-amber-400">brings you more clients</span>.
+            </p>
+          </div>
+
+          <!-- Service Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            <!-- Service 1 -->
+            <div class="service-card rounded-xl p-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                Full-Stack Web Development
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Complete web solutions from frontend to backend. Modern,
+                responsive, and lightning-fast websites that convert visitors to
+                customers.
+              </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card rounded-xl p-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                Performance Optimization
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Speed matters. I optimize your site for blazing-fast load times,
+                better SEO rankings, and improved user experience.
+              </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card rounded-xl p-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                UI/UX Design Excellence
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Beautiful interfaces that users love. I create intuitive designs
+                that engage your audience and drive conversions.
+              </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card rounded-xl p-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">
+                Digital Strategy & Growth
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                More than just code – I help strategize your digital presence to
+                attract more clients and grow your business online.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA and Tagline -->
+          <div class="mt-12 space-y-6">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/919544571233"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  class="bg-gradient-to-r from-amber-400 to-yellow-300 text-black font-semibold px-8 py-3 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-amber-400/40 active:scale-95"
+                >
+                  Start Your Project
+                </button>
+              </a>
+              <a href="#portfolio">
+                <button
+                  class="border border-amber-400/30 text-amber-400 hover:bg-amber-400/10 font-medium px-8 py-3 rounded-lg transition-all duration-300"
+                >
+                  View Portfolio
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Mind-blowing Animation -->
+        <div
+          class="lg:w-1/2 relative h-[600px] flex items-center justify-center"
+        >
+          <!-- Central Hub -->
+          <div
+            class="relative w-32 h-32 glow-box bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full flex items-center justify-center shadow-2xl"
+          >
+            <!-- Pulse Rings -->
+            <div
+              class="absolute inset-0 rounded-full border-2 border-amber-400/30 pulse-ring"
+            ></div>
+            <div
+              class="absolute inset-0 rounded-full border-2 border-amber-400/20 pulse-ring"
+              style="animation-delay: 0.5s"
+            ></div>
+            <div
+              class="absolute inset-0 rounded-full border-2 border-amber-400/10 pulse-ring"
+              style="animation-delay: 1s"
+            ></div>
+
+            <!-- Core Icon -->
+            <div
+              class="w-16 h-16 bg-black rounded-full flex items-center justify-center rotate-3d"
+            >
+              <svg
+                class="w-8 h-8 text-amber-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Orbiting Elements -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Orbit 1 -->
+            <div class="orbit-element interactive-element">
+              <div
+                class="w-16 h-16 bg-[#1e1e1e] border border-amber-400/40 rounded-xl flex items-center justify-center shadow-lg floating"
+              >
+                <svg
+                  class="w-8 h-8 text-amber-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Orbit 2 -->
+            <div
+              class="orbit-element interactive-element"
+              style="animation-delay: -5s"
+            >
+              <div
+                class="w-14 h-14 bg-[#1e1e1e] border border-yellow-300/40 rounded-lg flex items-center justify-center shadow-lg floating"
+              >
+                <svg
+                  class="w-7 h-7 text-yellow-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Orbit 3 -->
+            <div
+              class="orbit-element interactive-element"
+              style="animation-delay: -10s"
+            >
+              <div
+                class="w-12 h-12 bg-[#1e1e1e] border border-amber-300/40 rounded-full flex items-center justify-center shadow-lg floating"
+              >
+                <svg
+                  class="w-6 h-6 text-amber-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Orbit 4 -->
+            <div
+              class="orbit-element interactive-element"
+              style="animation-delay: -15s"
+            >
+              <div
+                class="w-10 h-10 bg-[#1e1e1e] border border-yellow-400/40 rounded-lg flex items-center justify-center shadow-lg floating"
+              >
+                <svg
+                  class="w-5 h-5 text-yellow-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small Orbit Ring -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="orbit-small interactive-element">
+              <div
+                class="w-8 h-8 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full flex items-center justify-center shadow-lg"
+              >
+                <div class="w-3 h-3 bg-black rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div
+              class="orbit-small interactive-element"
+              style="animation-delay: -7s"
+            >
+              <div
+                class="w-6 h-6 bg-amber-300 rounded-full shadow-lg floating"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Floating Geometric Shapes -->
+          <div
+            class="absolute top-10 left-10 w-6 h-6 bg-yellow-400/60 rounded-sm floating rotate-3d"
+          ></div>
+          <div
+            class="absolute top-20 right-16 w-4 h-8 bg-amber-400/40 rounded-full floating"
+            style="animation-delay: -3s"
+          ></div>
+          <div
+            class="absolute bottom-16 left-20 w-8 h-4 bg-yellow-300/50 rotating"
+            style="animation-delay: -6s"
+          ></div>
+          <div
+            class="absolute bottom-20 right-10 w-5 h-5 border-2 border-amber-400/60 rounded-full floating"
+            style="animation-delay: -9s"
+          ></div>
+
+          <!-- Interactive Dots -->
+          <div
+            class="absolute top-32 right-32 w-2 h-2 bg-amber-400 rounded-full opacity-70 floating interactive-element"
+          ></div>
+          <div
+            class="absolute bottom-32 left-32 w-3 h-3 bg-yellow-300 rounded-full opacity-60 floating interactive-element"
+            style="animation-delay: -4s"
+          ></div>
+          <div
+            class="absolute top-40 left-16 w-2 h-2 bg-amber-300 rounded-full opacity-80 floating interactive-element"
+            style="animation-delay: -8s"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="w-full mt-24 border-t border-zinc-800 bg-[#0a0a0a] py-8 text-zinc-400"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm"
+      >
+        <div class="flex items-center space-x-2">
+          <span>&copy; 2025</span>
+          <span class="font-semibold text-white">Salman Ahamed</span>
+          <span class="hidden sm:inline"
+            >| The Developer You've Been Waiting For</span
+          >
+        </div>
+        <div class="flex space-x-6">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanahamed5900@gmail.com"
+            target="_blank"
+            class="hover:text-amber-400 hover:drop-shadow-[0_0_6px_#facc15] transition duration-200"
+          >
+            Gmail
+          </a>
+
+          <a
+            href="https://instagram.com/sallu_5900"
+            target="_blank"
+            class="hover:text-amber-400 hover:drop-shadow-[0_0_6px_#facc15] transition duration-200"
+            >Instagram</a
+          >
+          <a
+            href="https://github.com/salman5900"
+            target="_blank"
+            class="hover:text-amber-400 hover:drop-shadow-[0_0_6px_#facc15] transition duration-200"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
