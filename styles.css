@@ -514,3 +514,69 @@ body {
   white-space: nowrap;
   animation: typewriter 3s steps(30) infinite, blink 1s step-end infinite;
 }
+
+.box {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffd700;
+  background: transparent;
+  box-shadow: 0 0 2px #ffd70033;
+}
+
+.box.fill {
+  background: #ffd700;
+  box-shadow: 0 0 12px #ffd700;
+}
+
+.pulse-hover {
+  border: 2px solid #facc15;
+  color: #facc15;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.66);
+}
+
+.pulse-hover:hover {
+  background-color: #facc15;
+  color: black;
+  box-shadow: 0 0 15px #facc15;
+}
+
+.tile-hover {
+  position: relative;
+  border-radius: 0.75rem; /* rounded-xl */
+  border: 1px solid #facc15; /* border-yellow-400 */
+  color: #d1d5db; /* text-gray-300 */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  text-align: center;
+  transition: all 0.3s;
+  overflow: hidden;
+  background-color: #111;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+}
+
+.tile-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(90deg, #facc15, #f59e0b);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 0;
+}
+
+.tile-hover:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.tile-hover > * {
+  position: relative;
+  z-index: 10;
+}
