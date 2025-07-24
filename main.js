@@ -134,17 +134,6 @@ const observer = new IntersectionObserver(
 
 observer.observe(consoleOutput);
 
-// dynamic navbar
-const navbar = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    navbar.classList.add("bg-navbar");
-  } else {
-    navbar.classList.remove("bg-navbar");
-  }
-});
-
 // animation for skills
 document.addEventListener("DOMContentLoaded", () => {
   const tiles = document.querySelectorAll(".glass-tile");
@@ -483,3 +472,25 @@ setInterval(createSparkle, 3000);
 function showIssuePopup() {
   alert("There is a small issue with the links. The dev is on it 🚧");
 }
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add(
+      "bg-black/40",
+      "backdrop-blur-lg",
+      "shadow-lg",
+      "border-b",
+      "border-yellow-500/10"
+    );
+  } else {
+    navbar.classList.remove(
+      "bg-black/40",
+      "backdrop-blur-lg",
+      "shadow-lg",
+      "border-b",
+      "border-yellow-500/10"
+    );
+  }
+});

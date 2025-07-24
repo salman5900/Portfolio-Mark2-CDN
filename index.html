@@ -26,33 +26,45 @@
   <body class="bg-[#111111] text-white">
     <!-- Header/Navbar -->
     <header
-      class="bg-transparent sticky top-0 flex justify-between items-center px-6 md:px-20 py-5 z-50 transition-colors duration-300 backdrop-blur-md"
+      id="navbar"
+      class="sticky top-0 z-50 px-6 md:px-20 py-5 flex justify-between items-center bg-transparent backdrop-blur-0 transition-all duration-300"
     >
-      <img src="./logo.png" alt="Salman Logo" class="h-10 w-auto" />
+      <img
+        src="./logo.png"
+        alt="Salman Logo"
+        class="h-10 w-auto drop-shadow-[0_0_12px_#facc15]"
+      />
+
+      <nav class="hidden md:flex space-x-6">
+        <a
+          href="#about_me"
+          class="px-5 py-2 text-sm font-bold uppercase tracking-wide text-white bg-neutral-900 hover:bg-yellow-400 hover:text-black shadow-[0_0_18px_#facc15] hover:shadow-[0_0_35px_#facc15] rounded-md transition-all duration-300 hover:scale-105"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="px-5 py-2 text-sm font-bold uppercase tracking-wide text-white bg-neutral-900 hover:bg-yellow-400 hover:text-black shadow-[0_0_18px_#facc15] hover:shadow-[0_0_35px_#facc15] rounded-md transition-all duration-300 hover:scale-105"
+          >Skills</a
+        >
+        <a
+          href="#portfolio"
+          class="px-5 py-2 text-sm font-bold uppercase tracking-wide text-white bg-neutral-900 hover:bg-yellow-400 hover:text-black shadow-[0_0_18px_#facc15] hover:shadow-[0_0_35px_#facc15] rounded-md transition-all duration-300 hover:scale-105"
+          >Work</a
+        >
+      </nav>
 
       <button
         id="hamburgerBtn"
+        type="button"
         aria-label="Open menu"
         aria-expanded="false"
         aria-controls="sideMenu"
-        type="button"
+        class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="block w-full h-0.5 bg-yellow-400"></span>
+        <span class="block w-full h-0.5 bg-yellow-400"></span>
+        <span class="block w-full h-0.5 bg-yellow-400"></span>
       </button>
-
-      <nav class="desktop-nav flex space-x-8 items-center">
-        <a href="#about_me" class="hover:text-amber-400 transition"
-          >This Is My Passion</a
-        >
-        <a href="#skills" class="hover:text-amber-400 transition"
-          >What Can I Do</a
-        >
-        <a href="#portfolio" class="hover:text-amber-400 transition"
-          >My Top Projects</a
-        >
-      </nav>
     </header>
 
     <div id="sideMenu" aria-hidden="true" role="menu">
