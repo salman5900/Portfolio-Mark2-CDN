@@ -473,24 +473,8 @@ function showIssuePopup() {
   alert("There is a small issue with the links. The dev is on it 🚧");
 }
 
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    navbar.classList.add(
-      "bg-black/40",
-      "backdrop-blur-lg",
-      "shadow-lg",
-      "border-b",
-      "border-yellow-500/10"
-    );
-  } else {
-    navbar.classList.remove(
-      "bg-black/40",
-      "backdrop-blur-lg",
-      "shadow-lg",
-      "border-b",
-      "border-yellow-500/10"
-    );
-  }
+window.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  navbar.classList.remove("opacity-0", "translate-y-[-30px]");
+  navbar.classList.add("opacity-100", "translate-y-0");
 });
