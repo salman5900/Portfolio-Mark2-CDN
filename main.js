@@ -472,7 +472,6 @@ setInterval(createSparkle, 3000);
 function showIssuePopup() {
   alert("There is a small issue with the links. The dev is on it 🚧");
 }
-
 window.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   navbar.classList.remove("opacity-0", "translate-y-[-30px]");
